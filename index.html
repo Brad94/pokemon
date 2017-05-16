@@ -3,8 +3,99 @@
 <head>
 </head>
 <body>
+	<div id="text1"></div>
+	<div id="input1"></div>
+	<div id="text2"></div>
+	<div id="input2"></div>
 
+	<div id="button1"></div>
 </body>
-<script type="text/javascript">
+<script type="text/javascript">	
+	var p1 = document.createElement("p");
+	var text1 = document.createTextNode("Please select a type of move"); 
+	p1.appendChild(text1);
+	var divText1 = document.getElementById("text1").appendChild(p1);
+
+	var input1 = document.createElement("select");
+	input1.setAttribute("id", "select1");    
+	var divInput1 = document.getElementById("input1").appendChild(input1);
+	input1.options.add(new Option("Fire","fire", true, true));
+	input1.options.add(new Option("Fighting","fighting"));
+	input1.options.add(new Option("Psychic","psychic"));
+	input1.options.add(new Option("Water","water"));
+
+
+	var p2 = document.createElement("p");
+	var text2 = document.createTextNode("Please select a type of Pokemon and any additional"); 
+	p2.appendChild(text2);
+	var divText2 = document.getElementById("text2").appendChild(p2);
+
+	var input2 = document.createElement("select");
+	input2.setAttribute("id", "select2"); 
+	var divInput2 = document.getElementById("input2").appendChild(input2);
+	input2.options.add(new Option("Grass","grass", true, true));
+	input2.options.add(new Option("Ice","ice"));
+	input2.options.add(new Option("Rock","rock"));
+	input2.options.add(new Option("Poison","poison"));
+	input2.options.add(new Option("Dark","dark"));
+	input2.options.add(new Option("Normal","normal"));
+	input2.options.add(new Option("Rock","rock"));
+
+	var input3 = document.createElement("select");
+	input3.setAttribute("id", "select3"); 
+	var divInput3 = document.getElementById("input2").appendChild(input3);
+	input3.options.add(new Option("Grass","grass", true, true));
+	input3.options.add(new Option("Ice","ice"));
+	input3.options.add(new Option("Rock","rock"));
+	input3.options.add(new Option("Poison","poison"));
+	input3.options.add(new Option("Dark","dark"));
+	input3.options.add(new Option("Normal","normal"));
+	input3.options.add(new Option("Rock","rock"));
+
+	var b1 = document.createElement("button");
+	b1.addEventListener("click", go, false);
+	var text3 = document.createTextNode("Go!"); 
+	b1.appendChild(text3);
+	var divButton1 = document.getElementById("button1").appendChild(b1);
+
+	function go(argument) {
+		
+		var getSelected1 = document.getElementById("select1");
+		var selected1 = getSelected1.options[getSelected1.selectedIndex].value;
+		console.log(selected1);
+
+		var getSelected2 = document.getElementById("select2");
+		var selected2 = getSelected2.options[getSelected2.selectedIndex].value;
+		console.log(selected2);
+
+		var getSelected3 = document.getElementById("select3");
+		var selected3 = getSelected3.options[getSelected3.selectedIndex].value;
+		console.log(selected3);
+
+		var moves = {
+			fire: 0,
+			fighting: 1,
+			psychic: 2,
+			water: 3,
+		}
+
+		// var types = {
+		// 	grass: 1,
+		// 	// ir: 1,
+		// 	// pd: 1,
+		// 	// normal: 1,
+		// 	// rock: 1,
+		// }
+		var cal = {
+			grass: [2,1,1,0.5]
+			ice: [2,2,0,]
+		}
+
+		//console.log(moves[selected1]);
+		//console.log(types[selected2]);
+
+		//console.log(cal[selected1][moves[selected1]]);
+		console.log(cal[selected2][moves[selected1]]);
+	}
 </script>
 </html>
