@@ -10,7 +10,9 @@
 
 	<div id="button1"></div>
 </body>
-<script type="text/javascript">	
+<script type="text/javascript">
+	"use strict";
+
 	var p1 = document.createElement("p");
 	var text1 = document.createTextNode("Please select a type of move"); 
 	p1.appendChild(text1);
@@ -44,7 +46,8 @@
 	var input3 = document.createElement("select");
 	input3.setAttribute("id", "select3"); 
 	var divInput3 = document.getElementById("input2").appendChild(input3);
-	input3.options.add(new Option("Grass","grass", true, true));
+	input3.options.add(new Option("","null", true, true));
+	input3.options.add(new Option("Grass","grass"));
 	input3.options.add(new Option("Ice","ice"));
 	input3.options.add(new Option("Rock","rock"));
 	input3.options.add(new Option("Poison","poison"));
@@ -78,24 +81,14 @@
 			psychic: 2,
 			water: 3,
 		}
-
-		// var types = {
-		// 	grass: 1,
-		// 	// ir: 1,
-		// 	// pd: 1,
-		// 	// normal: 1,
-		// 	// rock: 1,
-		// }
 		var cal = {
-			grass: [2,1,1,0.5]
+			grass: [2,1,1,0.5],
 			ice: [2,2,0,]
 		}
 
-		//console.log(moves[selected1]);
-		//console.log(types[selected2]);
 
-		//console.log(cal[selected1][moves[selected1]]);
 		console.log(cal[selected2][moves[selected1]]);
+		console.log(cal[selected3][moves[selected1]]);
 	}
 </script>
 </html>
