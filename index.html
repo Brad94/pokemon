@@ -63,7 +63,8 @@
 	var divText1 = document.getElementById("text1").appendChild(p1);
 
 	var input1 = document.createElement("select");
-	input1.setAttribute("id", "select1");    
+	input1.setAttribute("id", "select1");
+	input1.setAttribute("class", "btn btn-secondary dropdown-toggle"); 
 	var divInput1 = document.getElementById("input1").appendChild(input1);
 	input1.options.add(new Option("Fire","fire", true, true));
 	input1.options.add(new Option("Fighting","fighting"));
@@ -77,7 +78,8 @@
 	var divText2 = document.getElementById("text2").appendChild(p2);
 
 	var input2 = document.createElement("select");
-	input2.setAttribute("id", "select2"); 
+	input2.setAttribute("id", "select2");
+	input2.setAttribute("class", "btn btn-secondary dropdown-toggle");
 	var divInput2 = document.getElementById("input2").appendChild(input2);
 	input2.options.add(new Option("Grass","grass", true, true));
 	input2.options.add(new Option("Ice","ice"));
@@ -87,7 +89,8 @@
 	input2.options.add(new Option("Normal","normal"));
 
 	var input3 = document.createElement("select");
-	input3.setAttribute("id", "select3"); 
+	input3.setAttribute("id", "select3");
+	input3.setAttribute("class", "btn btn-secondary dropdown-toggle");
 	var divInput3 = document.getElementById("input2").appendChild(input3);
 	input3.options.add(new Option("","null", true, true));
 	input3.options.add(new Option("Grass","grass"));
